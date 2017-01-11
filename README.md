@@ -1,8 +1,8 @@
 # Docker Phalcon
 
-[![](https://images.microbadger.com/badges/version/mileschou/phalcon:alpine.svg)](http://microbadger.com/images/mileschou/phalcon:alpine "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/mileschou/phalcon:alpine.svg)](http://microbadger.com/images/mileschou/phalcon:alpine "Get your own image badge on microbadger.com") [![](https://img.shields.io/docker/stars/mileschou/phalcon.svg)](https://hub.docker.com/r/mileschou/phalcon/) [![](https://img.shields.io/docker/pulls/mileschou/phalcon.svg)](https://hub.docker.com/r/mileschou/phalcon/)
+[![](https://images.microbadger.com/badges/version/gabel/phalcon:7.0-fpm.svg)](http://microbadger.com/images/gabel/phalcon:7.0-fpm "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/gabel/phalcon:7.0-fpm.svg)](http://microbadger.com/images/gabel/phalcon:7.0-fpm "Get your own image badge on microbadger.com")  [![](https://img.shields.io/docker/stars/gabel/phalcon.svg)](https://hub.docker.com/r/gabel/phalcon/)  [![](https://img.shields.io/docker/pulls/gabel/phalcon.svg)](https://hub.docker.com/r/gabel/phalcon/)
 
-Docker Phalcon base image, see https://hub.docker.com/r/mileschou/phalcon/
+Forked from mileschou docker phalcon base image, see https://hub.docker.com/r/mileschou/phalcon/
 
 The repository is a Docker image based on [Docker official PHP image](https://hub.docker.com/_/php/) with [Phalcon Framework](https://phalconphp.com/) Version 3.0+.
 
@@ -12,14 +12,6 @@ The repository is a Docker image based on [Docker official PHP image](https://hu
 * [`7.0-alpine`, `alpine` (7.0/alpine/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/alpine/Dockerfile)
 * [`7.0-apache`, `apache` (7.0/apache/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/apache/Dockerfile)
 * [`7.0-fpm`, `fpm` (7.0/fpm/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/fpm/Dockerfile)
-* [`5.6-cli`, `5.6` (5.6/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.6/Dockerfile)
-* [`5.6-alpine` (5.6/alpine/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.6/alpine/Dockerfile)
-* [`5.6-apache` (5.6/apache/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.6/apache/Dockerfile)
-* [`5.6-fpm` (5.6/fpm/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.6/fpm/Dockerfile)
-* [`5.5-cli`, `5.5` (5.5/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.5/Dockerfile)
-* [`5.5-alpine` (5.5/alpine/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.5/alpine/Dockerfile)
-* [`5.5-apache` (5.5/apache/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.5/apache/Dockerfile)
-* [`5.5-fpm` (5.5/fpm/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/5.5/fpm/Dockerfile)
 
 ## Image Test
 
@@ -57,3 +49,4 @@ Recommend 2G+ RAM when build image yourself. Maybe wait a long time for compile 
 * [Docker Hub](https://hub.docker.com/)
 * [Shields.io](https://img.shields.io/) provide docker hub stars and pulls badge
 * [MicroBadger](https://microbadger.com/) provide image size and version badge
+* [maestrooo](https://github.com/maestrooo/eb-docker-php7) docker aws elastic beanstalk multicontainer defaults
