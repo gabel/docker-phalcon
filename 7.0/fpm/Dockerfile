@@ -22,7 +22,7 @@ RUN set -xe && \
         ln -s /usr/local/phalcon-devtools/phalcon.php /usr/local/bin/phalcon
 
 # Remove if not needed
-COPY config/custom.ini /usr/local/etc/php/conf.d/
+COPY config/zz_docker.ini /usr/local/etc/php/conf.d/
 
 # use proxy if needed
 # RUN pear config-set http_proxy $HTTP_PROXY
@@ -30,9 +30,11 @@ COPY config/custom.ini /usr/local/etc/php/conf.d/
 RUN pecl install apcu && \
     docker-php-ext-enable apcu
 
+RUN docker-php-ext-install opcache
+
 RUN apt-get update && \
     apt-get install -y libssl-dev && \
-    pecl install mongodb-1.2.2 && \
+    pecl install mongodb-1.2.5 && \
     docker-php-ext-enable mongodb
 
 # Set locales
