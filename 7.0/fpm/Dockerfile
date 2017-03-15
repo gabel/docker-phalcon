@@ -30,7 +30,10 @@ COPY config/php.ini /usr/local/etc/php/conf.d/
 RUN pecl install apcu && \
     docker-php-ext-enable apcu
 
-RUN docker-php-ext-install opcache zip
+RUN docker-php-ext-install opcache
+
+RUN docker-php-ext-configure zip && \
+    docker-php-ext-install zip
 
 RUN apt-get update && \
     apt-get install -y libssl-dev && \
