@@ -22,7 +22,7 @@ RUN set -xe && \
         ln -s /usr/local/phalcon-devtools/phalcon.php /usr/local/bin/phalcon
 
 # Remove if not needed
-COPY config/zz_docker.ini /usr/local/etc/php/conf.d/
+COPY config/php.ini /usr/local/etc/php/conf.d/
 
 # use proxy if needed
 # RUN pear config-set http_proxy $HTTP_PROXY
@@ -30,22 +30,17 @@ COPY config/zz_docker.ini /usr/local/etc/php/conf.d/
 RUN pecl install apcu && \
     docker-php-ext-enable apcu
 
-RUN docker-php-ext-install opcache
+RUN docker-php-ext-install opcache mcrypt zip
 
 RUN apt-get update && \
     apt-get install -y libssl-dev && \
     pecl install mongodb-1.2.5 && \
     docker-php-ext-enable mongodb
 
-# Set locales
-#RUN apt-get install -y libicu-dev locales && \
-#        echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
-#        echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen && \
-#        echo "en_GB.UTF-8 UTF-8" >> /etc/locale.gen && \
-#        docker-php-ext-configure intl && \
-#        docker-php-ext-install intl
-
-# RUN locale-gen
+RUN apt-get update \
+  && apt-get install -y zlib1g-dev libicu-dev g++ \
+  && docker-php-ext-configure intl \
+  && docker-php-ext-install intl
 
 RUN apt-get purge -y --auto-remove libssl-dev libicu-dev && \
     rm -rf /var/lib/apt/lists/*

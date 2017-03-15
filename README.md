@@ -8,10 +8,7 @@ The repository is a Docker image based on [Docker official PHP image](https://hu
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`7.0-cli`, `cli`, `7.0`, `latest` (7.0/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/Dockerfile)
-* [`7.0-alpine`, `alpine` (7.0/alpine/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/alpine/Dockerfile)
-* [`7.0-apache`, `apache` (7.0/apache/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/apache/Dockerfile)
-* [`7.0-fpm`, `fpm` (7.0/fpm/Dockerfile)](https://github.com/MilesChou/docker-phalcon/blob/master/7.0/fpm/Dockerfile)
+* [`7.0-fpm`, `fpm` (7.0/fpm/Dockerfile)](https://github.com/gabel/phalcon/blob/master/7.0/fpm/Dockerfile)
 
 ## Image Test
 
@@ -50,3 +47,4 @@ Recommend 2G+ RAM when build image yourself. Maybe wait a long time for compile 
 * [Shields.io](https://img.shields.io/) provide docker hub stars and pulls badge
 * [MicroBadger](https://microbadger.com/) provide image size and version badge
 * [maestrooo](https://github.com/maestrooo/eb-docker-php7) docker aws elastic beanstalk multicontainer defaults
+* [MilesChou](https://github.com/MilesChou/docker-phalcon) Docker-phalcon base image 
