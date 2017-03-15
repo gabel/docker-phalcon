@@ -40,7 +40,7 @@ RUN apt-get update && \
     pecl install mongodb-1.2.5 && \
     docker-php-ext-enable mongodb
 
-RUN apt-get install -y zlib1g-dev libicu-dev g++ \
+RUN apt-get install -y zlib1g-dev libicu-dev libicu52 g++ \
   && docker-php-ext-configure intl \
   && docker-php-ext-install intl
 
