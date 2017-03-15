@@ -32,20 +32,19 @@ RUN pecl install apcu && \
 
 RUN docker-php-ext-install opcache
 
-RUN docker-php-ext-configure zip && \
-    docker-php-ext-install zip
+RUN apt-get update && apt-get install -y zlib1g-dev \
+    && docker-php-ext-install zip
 
 RUN apt-get update && \
     apt-get install -y libssl-dev && \
     pecl install mongodb-1.2.5 && \
     docker-php-ext-enable mongodb
 
-RUN apt-get update \
-  && apt-get install -y zlib1g-dev libicu-dev g++ \
+RUN apt-get install -y zlib1g-dev libicu-dev g++ \
   && docker-php-ext-configure intl \
   && docker-php-ext-install intl
 
-RUN apt-get purge -y --auto-remove libssl-dev libicu-dev && \
+RUN apt-get purge -y --auto-remove libssl-dev libicu-dev zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
